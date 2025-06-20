@@ -15,7 +15,7 @@ services:
       - POSTGRES_PASSWORD=password12
       - POSTGRES_DB=simple_store
     ports:
-      - "5000:5432"
+      - "5432:5432"
     volumes:
       - postgres_db:/var/lib/postgresql/data
     networks:
