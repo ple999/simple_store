@@ -20,12 +20,7 @@ jobs:
           POSTGRES_PASSWORD: password12
           POSTGRES_DB: simple_store
         ports:
-          - 5000:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+          - 5432:5432
 
     steps:
 
