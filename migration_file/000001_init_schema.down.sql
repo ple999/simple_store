@@ -1,0 +1,16 @@
+drop sequence if exists order_lines_line_id_sequence;
+drop table if exists order_lines;
+drop sequence if exists order_header_order_header_id_sequence;
+drop table if exists order_header;
+drop sequence if exists order_statuses_order_status_id;
+drop table if exists order_statuses;
+drop sequence if exists products_product_id_sequence;
+drop table if exists products;
+drop sequence if exists product_statuses_product_status_id_sequence;
+drop table if exists product_statuses;
+drop sequence if exists merchants_merchant_id_sequence;
+drop table if exists merchants;
+drop sequence if exists users_user_id_sequence;
+drop table if exists users;
+drop sequence if exists countries_country_id_sequence;
+drop table if exists countries;

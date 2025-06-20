@@ -1,0 +1,11 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "query.sql"
+    schema: "schema.sql"
+    gen:
+      go:
+        package: "simple_store_sqlc"
+        out: "simple_store_sqlc"
+        sql_package: "pgx/v5"
+        emit_interface: true
