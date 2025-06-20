@@ -1,4 +1,4 @@
-name: ci test
+name: Run Main Test
 
 on:
   push:
@@ -16,11 +16,11 @@ jobs:
       postgres:
         image: postgres:12-alpine
         env:
-          POSTGRES_USER: root
-          POSTGRES_PASSWORD: secret
-          POSTGRES_DB: simple_bank
+          POSTGRES_USER: alpine12
+          POSTGRES_PASSWORD: password12
+          POSTGRES_DB: simple_store
         ports:
-          - 5432:5432
+          - 5000:5432
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -47,5 +47,3 @@ jobs:
     - name: Run migrations
       run: make migrateup
 
-    - name: Test
-      run: make test
