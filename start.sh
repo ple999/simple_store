@@ -3,7 +3,7 @@
 set -e
 
 echo "Running DB Migration"
-/app/migrate -path /app/migration_file -database "$DB_CONNECTION" -verbose up
+/app/migrate -path /app/migration_file -database "$dbConnection" -verbose up
 
 echo "Starting Server"
 exec "$@"
