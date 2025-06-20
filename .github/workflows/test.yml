@@ -20,7 +20,7 @@ jobs:
           POSTGRES_PASSWORD: password12
           POSTGRES_DB: simple_store
         ports:
-          - 6000:6001
+          - 6000:6000
 
     steps:
 
