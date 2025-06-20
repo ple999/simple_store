@@ -9,8 +9,8 @@ createdb:
 dropdb:
 	docker exec -it postgres_alpine12 dropdb simple_store  -U alpine12
 migrateup:
-	migrate -path ./migration_file -database "postgresql://alpine12:password12@localhost:6001/simple_store?sslmode=disable" -verbose up
+	migrate -path ./migration_file -database "postgresql://alpine12:password12@localhost:6000/simple_store?sslmode=disable" -verbose up
 migratedown:
-	migrate -path ./migration_file -database "postgresql://alpine12:password12@localhost:6001/simple_store?sslmode=disable" -verbose down
+	migrate -path ./migration_file -database "postgresql://alpine12:password12@localhost:6000/simple_store?sslmode=disable" -verbose down
 
 .PHONY: generate_postgres_container run_postgres_container stop_postgres_container createdb dropdb migrateup migratedown
