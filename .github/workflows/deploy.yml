@@ -1,4 +1,4 @@
-name: Deploy to production 3
+name: Deploy to production 4
 
 on:
   push:
@@ -35,4 +35,4 @@ jobs:
         IMAGE_TAG: ${{ github.sha }}
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAGaws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 785316066448.dkr.ecr.eu-west-2.amazonaws.com
